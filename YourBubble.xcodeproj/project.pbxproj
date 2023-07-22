@@ -39,6 +39,14 @@
 		DAEF31FF2A6BCFF300C9D412 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAEF31FE2A6BCFF300C9D412 /* FirebaseRemoteConfigSwift */; };
 		DAEF32012A6BCFF300C9D412 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DAEF32002A6BCFF300C9D412 /* FirebaseStorage */; };
 		DAEF32032A6BCFF300C9D412 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DAEF32022A6BCFF300C9D412 /* FirebaseStorageCombine-Community */; };
+		DAEF32062A6BE6D300C9D412 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF32052A6BE6D300C9D412 /* AuthenticationView.swift */; };
+		DAEF32082A6C05B700C9D412 /* SignInEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF32072A6C05B700C9D412 /* SignInEmailView.swift */; };
+		DAEF320A2A6C05CA00C9D412 /* SignInEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF32092A6C05CA00C9D412 /* SignInEmailViewModel.swift */; };
+		DAEF320D2A6C0EFE00C9D412 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF320C2A6C0EFE00C9D412 /* AuthenticationManager.swift */; };
+		DAEF32102A6C124B00C9D412 /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF320F2A6C124B00C9D412 /* AuthDataResultModel.swift */; };
+		DAEF32122A6C1E0200C9D412 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF32112A6C1E0200C9D412 /* RootView.swift */; };
+		DAEF32152A6C212C00C9D412 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF32142A6C212C00C9D412 /* SettingsView.swift */; };
+		DAEF32172A6C213B00C9D412 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF32162A6C213B00C9D412 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +56,14 @@
 		DAEF31C12A6BCABB00C9D412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAEF31C42A6BCABB00C9D412 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DAEF31CB2A6BCDB700C9D412 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DAEF32052A6BE6D300C9D412 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		DAEF32072A6C05B700C9D412 /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
+		DAEF32092A6C05CA00C9D412 /* SignInEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailViewModel.swift; sourceTree = "<group>"; };
+		DAEF320C2A6C0EFE00C9D412 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		DAEF320F2A6C124B00C9D412 /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
+		DAEF32112A6C1E0200C9D412 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		DAEF32142A6C212C00C9D412 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DAEF32162A6C213B00C9D412 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +125,8 @@
 			children = (
 				DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */,
 				DAEF31BF2A6BCAB900C9D412 /* ContentView.swift */,
+				DAEF320E2A6C123500C9D412 /* Model */,
+				DAEF32042A6BE69A00C9D412 /* Authentication */,
 				DAEF31CB2A6BCDB700C9D412 /* GoogleService-Info.plist */,
 				DAEF31C12A6BCABB00C9D412 /* Assets.xcassets */,
 				DAEF31C32A6BCABB00C9D412 /* Preview Content */,
@@ -122,6 +140,44 @@
 				DAEF31C42A6BCABB00C9D412 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DAEF32042A6BE69A00C9D412 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				DAEF32112A6C1E0200C9D412 /* RootView.swift */,
+				DAEF320C2A6C0EFE00C9D412 /* AuthenticationManager.swift */,
+				DAEF32052A6BE6D300C9D412 /* AuthenticationView.swift */,
+				DAEF32132A6C210B00C9D412 /* Settings */,
+				DAEF320B2A6C098900C9D412 /* SignIn */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		DAEF320B2A6C098900C9D412 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				DAEF32072A6C05B700C9D412 /* SignInEmailView.swift */,
+				DAEF32092A6C05CA00C9D412 /* SignInEmailViewModel.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		DAEF320E2A6C123500C9D412 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAEF320F2A6C124B00C9D412 /* AuthDataResultModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAEF32132A6C210B00C9D412 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DAEF32142A6C212C00C9D412 /* SettingsView.swift */,
+				DAEF32162A6C213B00C9D412 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,8 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAEF32122A6C1E0200C9D412 /* RootView.swift in Sources */,
 				DAEF31C02A6BCAB900C9D412 /* ContentView.swift in Sources */,
 				DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */,
+				DAEF32152A6C212C00C9D412 /* SettingsView.swift in Sources */,
+				DAEF32102A6C124B00C9D412 /* AuthDataResultModel.swift in Sources */,
+				DAEF32172A6C213B00C9D412 /* SettingsViewModel.swift in Sources */,
+				DAEF32062A6BE6D300C9D412 /* AuthenticationView.swift in Sources */,
+				DAEF320D2A6C0EFE00C9D412 /* AuthenticationManager.swift in Sources */,
+				DAEF32082A6C05B700C9D412 /* SignInEmailView.swift in Sources */,
+				DAEF320A2A6C05CA00C9D412 /* SignInEmailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

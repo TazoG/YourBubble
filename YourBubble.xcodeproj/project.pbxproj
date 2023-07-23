@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAD331182A6D6368003DFA6D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331172A6D6368003DFA6D /* SignUpView.swift */; };
+		DAD3311A2A6D637B003DFA6D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */; };
 		DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */; };
 		DAEF31C02A6BCAB900C9D412 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF31BF2A6BCAB900C9D412 /* ContentView.swift */; };
 		DAEF31C22A6BCABB00C9D412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEF31C12A6BCABB00C9D412 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DAD331172A6D6368003DFA6D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		DAEF31BA2A6BCAB900C9D412 /* YourBubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourBubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourBubbleApp.swift; sourceTree = "<group>"; };
 		DAEF31BF2A6BCAB900C9D412 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAD331162A6D6344003DFA6D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				DAD331172A6D6368003DFA6D /* SignUpView.swift */,
+				DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		DAEF31B12A6BCAB900C9D412 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 				DAEF320C2A6C0EFE00C9D412 /* AuthenticationManager.swift */,
 				DAEF32052A6BE6D300C9D412 /* AuthenticationView.swift */,
 				DAEF32132A6C210B00C9D412 /* Settings */,
+				DAD331162A6D6344003DFA6D /* SignUp */,
 				DAEF320B2A6C098900C9D412 /* SignIn */,
 			);
 			path = Authentication;
@@ -288,10 +302,12 @@
 				DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */,
 				DAEF32152A6C212C00C9D412 /* SettingsView.swift in Sources */,
 				DAEF32102A6C124B00C9D412 /* AuthDataResultModel.swift in Sources */,
+				DAD331182A6D6368003DFA6D /* SignUpView.swift in Sources */,
 				DAEF32172A6C213B00C9D412 /* SettingsViewModel.swift in Sources */,
 				DAEF32062A6BE6D300C9D412 /* AuthenticationView.swift in Sources */,
 				DAEF320D2A6C0EFE00C9D412 /* AuthenticationManager.swift in Sources */,
 				DAEF32082A6C05B700C9D412 /* SignInEmailView.swift in Sources */,
+				DAD3311A2A6D637B003DFA6D /* SignUpViewModel.swift in Sources */,
 				DAEF320A2A6C05CA00C9D412 /* SignInEmailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

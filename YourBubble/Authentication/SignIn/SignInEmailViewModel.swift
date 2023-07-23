@@ -13,21 +13,18 @@ final class SignInEmailViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
+    @Published var repeatPassword = ""
     
-    func signIn() {
+    
+    
+    func signIn() async throws {
         guard !email.isEmpty, !password.isEmpty else {
             print("Email or password is empty")
             return
         }
         
-        Task {
-            do {
-                let returnedUserData = try await AuthenticationManager.shared.createUser(email: email, password: password)
-                print(returnedUserData)
-                print("Success")
-            } catch {
-                print("Error: \(error.localizedDescription)")
-            }
-        }
+        try await AuthenticationManager.shared.signInUser(email: email, password: password)
     }
+    
+    
 }

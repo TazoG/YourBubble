@@ -14,16 +14,57 @@ struct SettingsView: View {
     
     var body: some View {
         List {
-            Button("Log Out") {
+            emailSection
+            
+            logOutButton
+        }
+    }
+}
+
+private extension SettingsView {
+    var logOutButton: some View {
+        Button("Log Out") {
+            Task {
+                do {
+                    try viewModel.signOut()
+                    showSignInView = true
+                } catch {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+        }
+        .foregroundColor(.red)
+    }
+    
+    var emailSection: some View {
+        Section {
+            Button("Reset Password") {
+                viewModel.resetPassword()
+            }
+            
+            Button("Update Password") {
                 Task {
                     do {
-                        try viewModel.signOut()
-                        showSignInView = true
+                        try await viewModel.updatePassword()
+                        print("Password Updated!")
                     } catch {
                         print("Error: \(error.localizedDescription)")
                     }
                 }
             }
+            
+            Button("Update Email") {
+                Task {
+                    do {
+                        try await viewModel.updateEmail()
+                        print("Email Updated!")
+                    } catch {
+                        print("Error: \(error.localizedDescription)")
+                    }
+                }
+            }
+        } header: {
+            Text("Account Functions")
         }
     }
 }

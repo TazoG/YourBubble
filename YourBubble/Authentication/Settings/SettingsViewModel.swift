@@ -31,6 +31,10 @@ final class SettingsViewModel: ObservableObject {
         }
     }
     
+    func deleteAccount() async throws {
+        try await AuthenticationManager.shared.delete()
+    }
+    
     func updateEmail() async throws {
 //        try await AuthenticationManager.shared.updateEmail(email: email)
     }

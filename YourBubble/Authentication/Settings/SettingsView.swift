@@ -17,6 +17,8 @@ struct SettingsView: View {
             emailSection
             
             logOutButton
+            
+            deleteAccount
         }
     }
 }
@@ -66,6 +68,22 @@ private extension SettingsView {
         } header: {
             Text("Account Functions")
         }
+    }
+    
+    var deleteAccount: some View {
+        Button(role: .destructive) {
+            Task {
+                do {
+                    try await viewModel.deleteAccount()
+                    showSignInView = true
+                } catch {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+        } label: {
+            Text("Delete Account")
+        }
+
     }
 }
 

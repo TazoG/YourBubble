@@ -51,7 +51,6 @@ struct SignUpView: View {
                     .frame(maxWidth: .infinity)
                     .background(Color.blue)
                     .cornerRadius(10)
-                    .padding(.trailing, 22)
             }
             .disabled(!viewModel.isSignUpEnabled)
             
@@ -73,20 +72,21 @@ struct SignUpView_Previews: PreviewProvider {
 
 extension SignUpView {
     var pickerBody: some View {
-        Picker(selection: $selection) {
+        
+        Menu {
             ForEach(professionOptions, id: \.self) { option in
-                Text(option)
-                    .tag(option)
+                Button(option) {
+                    viewModel.profession = option
+                }
             }
         } label: {
-            Text("Select you profession")
+            Text(viewModel.profession.isEmpty ? "Select you profession" : viewModel.profession)
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(Color.blue)
+                .background(Color.green)
                 .cornerRadius(10)
         }
-        .pickerStyle(.navigationLink)
     }
 }

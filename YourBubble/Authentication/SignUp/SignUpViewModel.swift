@@ -10,6 +10,7 @@ import FirebaseAuth
 
 @MainActor
 final class SignUpViewModel: ObservableObject {
+    @Published var fullName = ""
     @Published var email = ""
     @Published var password = ""
     @Published var repeatPassword = ""
@@ -17,6 +18,7 @@ final class SignUpViewModel: ObservableObject {
     @Published var showAlert = false
     @Published var alertTitle = ""
     @Published var alertMessage = ""
+    @Published var forLogIn = false
     
     func signUp() async throws {
         
@@ -28,6 +30,7 @@ final class SignUpViewModel: ObservableObject {
         }
         
         try await AuthenticationManager.shared.createUser(email: email, password: password)
+        forLogIn = true
     }
     
     var isSignUpEnabled: Bool {

@@ -10,12 +10,30 @@ import SwiftUI
 struct SignUpView: View {
     
     @StateObject var viewModel = SignUpViewModel()
+    @State private var profileImage: Image? = Image(systemName: "person.crop.circle")
     @Binding var showSignInView: Bool
-    @State var selection = "Select your profession"
     let professionOptions = ["IT", "Real Estate", "Financist"]
     
     var body: some View {
         VStack {
+            Button(action: {
+                // Add your action here to pick an image
+            }) {
+                profileImage?
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 120, height: 120)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                    .shadow(radius: 10)
+            }
+            .padding()
+            
+            TextField("Full Name...", text: $viewModel.fullName)
+                .padding()
+                .background(Color.gray.opacity(0.4))
+                .cornerRadius(10)
+            
             TextField("Email...", text: $viewModel.email)
                 .padding()
                 .background(Color.gray.opacity(0.4))
@@ -35,13 +53,8 @@ struct SignUpView: View {
             
             Button {
                 Task {
-                    do {
-                        try await viewModel.signUp()
-                        showSignInView = true
-                        return
-                    } catch {
-                        print(error.localizedDescription)
-                    }
+                  
+                   try await viewModel.signUp()
                 }
             } label: {
                 Text("Sign Up")
@@ -52,13 +65,19 @@ struct SignUpView: View {
                     .background(Color.blue)
                     .cornerRadius(10)
             }
-            .disabled(!viewModel.isSignUpEnabled)
+//            .disabled(!viewModel.isSignUpEnabled)
             
             Spacer()
         }
         .shadow(radius: 10, y: 5)
         .padding(.horizontal)
         .navigationTitle("Sign up with Email")
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text(viewModel.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
+        }
+        .onChange(of: viewModel.forLogIn) { newValue in
+            showSignInView = !newValue
+        }
     }
 }
 

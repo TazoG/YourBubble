@@ -26,13 +26,9 @@ struct SignInEmailView: View {
             
             Button {
                 Task {
-                    do {
-                        try await viewModel.signIn()
-                        showSignInView = false
-                        return
-                    } catch {
-                        print(error.localizedDescription)
-                    }
+                    
+                    await viewModel.signIn()
+
                 }
             } label: {
                 Text("Sign In")
@@ -53,10 +49,18 @@ struct SignInEmailView: View {
                 }
             }
             .padding()
+            
+            
         }
         .shadow(radius: 10, y: 5)
         .padding()
         .navigationTitle("Sign In With Email")
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text(viewModel.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
+        }
+        .onChange(of: viewModel.shouldDismiss) { newValue in
+            showSignInView = !newValue
+        }
     }
 }
 

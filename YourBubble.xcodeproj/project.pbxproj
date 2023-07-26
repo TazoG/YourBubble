@@ -10,6 +10,7 @@
 		DAAC031D2A702A890003F756 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031C2A702A890003F756 /* ProfileView.swift */; };
 		DAAC031F2A7033540003F756 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031E2A7033540003F756 /* ProfileViewModel.swift */; };
 		DAC4BC0A2A71766C00893B29 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC092A71766C00893B29 /* UserManager.swift */; };
+		DAC4BC0C2A71856900893B29 /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC0B2A71856900893B29 /* DBUser.swift */; };
 		DAD331182A6D6368003DFA6D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331172A6D6368003DFA6D /* SignUpView.swift */; };
 		DAD3311A2A6D637B003DFA6D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */; };
 		DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */; };
@@ -58,6 +59,7 @@
 		DAAC031C2A702A890003F756 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DAAC031E2A7033540003F756 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DAC4BC092A71766C00893B29 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		DAC4BC0B2A71856900893B29 /* DBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUser.swift; sourceTree = "<group>"; };
 		DAD331172A6D6368003DFA6D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		DAEF31BA2A6BCAB900C9D412 /* YourBubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourBubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				DAEF320F2A6C124B00C9D412 /* AuthDataResultModel.swift */,
+				DAC4BC0B2A71856900893B29 /* DBUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				DAEF32172A6C213B00C9D412 /* SettingsViewModel.swift in Sources */,
 				DAEF32062A6BE6D300C9D412 /* AuthenticationView.swift in Sources */,
 				DAEF320D2A6C0EFE00C9D412 /* AuthenticationManager.swift in Sources */,
+				DAC4BC0C2A71856900893B29 /* DBUser.swift in Sources */,
 				DAEF32082A6C05B700C9D412 /* SignInEmailView.swift in Sources */,
 				DAD3311A2A6D637B003DFA6D /* SignUpViewModel.swift in Sources */,
 				DAEF320A2A6C05CA00C9D412 /* SignInEmailViewModel.swift in Sources */,

@@ -14,14 +14,33 @@ final class UserManager {
     
     private init() {}
     
-    func createNewUser(auth: AuthDataResultModel) async throws {
-        var userData: [String: Any] = [
+    func createNewUser(auth: AuthDataResultModel, fullName: String, profession: String) async throws {
+        let userData: [String: Any] = [
             "userId": auth.uid,
+            "fullName": fullName,
             "email": auth.email as Any,
+            "profession": profession,
             "photoUrl": auth.photoUrl as Any
         ]
         
         
         try await Firestore.firestore().collection("users").document(auth.uid).setData(userData, merge: false)
     }
+    
+    func getUser(userId: String) async throws -> DBUser {
+        let snapshot = try await Firestore.firestore().collection("users").document(userId).getDocument()
+        
+        guard let data = snapshot.data(), let userId = data["userId"] as? String else {
+            throw URLError(.badServerResponse)
+        }
+        
+        let fullName = data["fullName"] as? String
+        let email = data["email"] as? String
+        let profession = data["profession"] as? String
+        let photoUrl = data["photoUrl"] as? String
+        
+        
+        return DBUser(userId: userId, fullName: fullName, email: email, profession: profession, photoUrl: photoUrl)
+    }
+    
 }

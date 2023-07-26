@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "00813735-EA29-4B42-BDEA-E20BE79658EC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15A2569D-6CF1-464D-9A9C-AE191D190C9E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YourBubble/Authentication/SignInEmailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "SignInEmailView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB39C7E1-8CA3-4BCE-B238-88A9E6DA9585"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YourBubble/Authentication/SignIn/SignInEmailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6135D7CB-EE83-44F4-B603-36BABAA8D46E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YourBubble/Authentication/SignIn/SignInEmailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "763E211C-5C67-4CC8-8CBD-955E31ED0E7A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YourBubble/Authentication/SignUp/SignUpViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "signUp()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "763E211C-5C67-4CC8-8CBD-955E31ED0E7A - 1d84135a410b2f4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for YourBubble.SignUpViewModel.signUp() async throws -&gt; ()"
+                  moduleName = "YourBubble"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tazogigitashvili/Downloads/Tazo/YourBubble/YourBubble/YourBubble/Authentication/SignUp/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "414">
+               </Location>
+               <Location
+                  uuid = "763E211C-5C67-4CC8-8CBD-955E31ED0E7A - c64bd84c1fd34d63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for YourBubble.SignUpViewModel.signUp() async throws -&gt; ()"
+                  moduleName = "YourBubble"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tazogigitashvili/Downloads/Tazo/YourBubble/YourBubble/YourBubble/Authentication/SignUp/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "763E211C-5C67-4CC8-8CBD-955E31ED0E7A - f455ba5af9d66752"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for YourBubble.SignUpViewModel.signUp() async throws -&gt; ()"
+                  moduleName = "YourBubble"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tazogigitashvili/Downloads/Tazo/YourBubble/YourBubble/YourBubble/Authentication/SignUp/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  uuid = "763E211C-5C67-4CC8-8CBD-955E31ED0E7A - b00d35da92c77b51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for YourBubble.SignUpViewModel.signUp() async throws -&gt; ()"
+                  moduleName = "YourBubble"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tazogigitashvili/Downloads/Tazo/YourBubble/YourBubble/YourBubble/Authentication/SignUp/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "763E211C-5C67-4CC8-8CBD-955E31ED0E7A - 8435082577691756"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for YourBubble.SignUpViewModel.signUp() async throws -&gt; ()"
+                  moduleName = "YourBubble"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tazogigitashvili/Downloads/Tazo/YourBubble/YourBubble/YourBubble/Authentication/SignUp/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

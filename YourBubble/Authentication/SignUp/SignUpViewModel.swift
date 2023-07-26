@@ -7,6 +7,8 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 @MainActor
 final class SignUpViewModel: ObservableObject {
@@ -30,7 +32,7 @@ final class SignUpViewModel: ObservableObject {
         }
         
         let authDataResult = try await AuthenticationManager.shared.createUser(email: email, password: password)
-        try await UserManager.shared.createNewUser(auth: authDataResult)
+        try await UserManager.shared.createNewUser(auth: authDataResult, fullName: fullName, profession: profession)
         
         forLogIn = true
     }

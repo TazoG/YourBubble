@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DAAC031D2A702A890003F756 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031C2A702A890003F756 /* ProfileView.swift */; };
 		DAAC031F2A7033540003F756 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031E2A7033540003F756 /* ProfileViewModel.swift */; };
+		DAC4BC0A2A71766C00893B29 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC092A71766C00893B29 /* UserManager.swift */; };
 		DAD331182A6D6368003DFA6D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331172A6D6368003DFA6D /* SignUpView.swift */; };
 		DAD3311A2A6D637B003DFA6D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */; };
 		DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		DAAC031C2A702A890003F756 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DAAC031E2A7033540003F756 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		DAC4BC092A71766C00893B29 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		DAD331172A6D6368003DFA6D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		DAEF31BA2A6BCAB900C9D412 /* YourBubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourBubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		DAC4BC082A71764E00893B29 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DAEF320C2A6C0EFE00C9D412 /* AuthenticationManager.swift */,
+				DAC4BC092A71766C00893B29 /* UserManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		DAD331162A6D6344003DFA6D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +164,7 @@
 				DAEF31BF2A6BCAB900C9D412 /* ContentView.swift */,
 				DAEF320E2A6C123500C9D412 /* Model */,
 				DAAC031B2A702A5C0003F756 /* Profile */,
+				DAC4BC082A71764E00893B29 /* Managers */,
 				DAEF32042A6BE69A00C9D412 /* Authentication */,
 				DAEF31CB2A6BCDB700C9D412 /* GoogleService-Info.plist */,
 				DAEF31C12A6BCABB00C9D412 /* Assets.xcassets */,
@@ -173,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				DAEF32112A6C1E0200C9D412 /* RootView.swift */,
-				DAEF320C2A6C0EFE00C9D412 /* AuthenticationManager.swift */,
 				DAEF32052A6BE6D300C9D412 /* AuthenticationView.swift */,
 				DAEF32132A6C210B00C9D412 /* Settings */,
 				DAD331162A6D6344003DFA6D /* SignUp */,
@@ -314,6 +325,7 @@
 				DAEF32122A6C1E0200C9D412 /* RootView.swift in Sources */,
 				DAAC031D2A702A890003F756 /* ProfileView.swift in Sources */,
 				DAEF31C02A6BCAB900C9D412 /* ContentView.swift in Sources */,
+				DAC4BC0A2A71766C00893B29 /* UserManager.swift in Sources */,
 				DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */,
 				DAEF32152A6C212C00C9D412 /* SettingsView.swift in Sources */,
 				DAEF32102A6C124B00C9D412 /* AuthDataResultModel.swift in Sources */,

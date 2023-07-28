@@ -54,7 +54,7 @@ struct SignInEmailView: View {
         }
         .shadow(radius: 10, y: 5)
         .padding()
-        .navigationTitle("Sign In With Email")
+        .navigationTitle("Sign In")
         .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text(viewModel.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
         }

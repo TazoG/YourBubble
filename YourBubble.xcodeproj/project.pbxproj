@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA7F3BA82A7297BF004E377E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F3BA72A7297BF004E377E /* ImagePicker.swift */; };
 		DAAC031D2A702A890003F756 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031C2A702A890003F756 /* ProfileView.swift */; };
 		DAAC031F2A7033540003F756 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031E2A7033540003F756 /* ProfileViewModel.swift */; };
 		DAC4BC0A2A71766C00893B29 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC092A71766C00893B29 /* UserManager.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA7F3BA72A7297BF004E377E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DAAC031C2A702A890003F756 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DAAC031E2A7033540003F756 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DAC4BC092A71766C00893B29 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA7F3BA62A729786004E377E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DA7F3BA72A7297BF004E377E /* ImagePicker.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		DAAC031B2A702A5C0003F756 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 				DAEF32132A6C210B00C9D412 /* Settings */,
 				DAD331162A6D6344003DFA6D /* SignUp */,
 				DAEF320B2A6C098900C9D412 /* SignIn */,
+				DA7F3BA62A729786004E377E /* Utility */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -328,6 +339,7 @@
 				DAEF32122A6C1E0200C9D412 /* RootView.swift in Sources */,
 				DAAC031D2A702A890003F756 /* ProfileView.swift in Sources */,
 				DAEF31C02A6BCAB900C9D412 /* ContentView.swift in Sources */,
+				DA7F3BA82A7297BF004E377E /* ImagePicker.swift in Sources */,
 				DAC4BC0A2A71766C00893B29 /* UserManager.swift in Sources */,
 				DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */,
 				DAEF32152A6C212C00C9D412 /* SettingsView.swift in Sources */,

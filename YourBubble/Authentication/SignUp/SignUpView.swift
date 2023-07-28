@@ -10,24 +10,12 @@ import SwiftUI
 struct SignUpView: View {
     
     @StateObject var viewModel = SignUpViewModel()
-    @State private var profileImage: Image? = Image(systemName: "person.crop.circle")
     @Binding var showSignInView: Bool
     let professionOptions = ["IT", "Real Estate", "Financist"]
     
     var body: some View {
         VStack {
-            Button(action: {
-                // Add your action here to pick an image
-            }) {
-                profileImage?
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 120, height: 120)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                    .shadow(color: .black.opacity(0.1), radius: 10)
-            }
-            .padding()
+            
             
             TextField("Full Name...", text: $viewModel.fullName)
                 .padding()
@@ -49,7 +37,7 @@ struct SignUpView: View {
                 .background(Color.gray.opacity(0.4))
                 .cornerRadius(10)
             
-            pickerBody
+            menuBody
             
             Button {
                 Task {
@@ -69,9 +57,10 @@ struct SignUpView: View {
             
             Spacer()
         }
+        
         .shadow(radius: 10, y: 5)
         .padding(.horizontal)
-        .navigationTitle("Sign up with Email")
+        .navigationTitle("Sign Up")
         .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text(viewModel.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
         }
@@ -90,7 +79,7 @@ struct SignUpView_Previews: PreviewProvider {
 }
 
 extension SignUpView {
-    var pickerBody: some View {
+    var menuBody: some View {
         
         Menu {
             ForEach(professionOptions, id: \.self) { option in

@@ -56,6 +56,15 @@ struct ProfileView: View {
                         }
                     }
                 }
+                
+                Button {
+                    LocationManager.shared.requestLocation()
+                } label: {
+                    Text("Location")
+                }
+                .padding()
+
+                
                 Spacer()
             }
             .sheet(isPresented: $openCameraRoll, content: {
@@ -74,7 +83,7 @@ struct ProfileView: View {
                             .font(.headline)
                     }
                 }
-        }
+            }
         }
     }
 }

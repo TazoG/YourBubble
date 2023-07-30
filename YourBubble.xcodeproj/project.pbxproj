@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA7F3BA82A7297BF004E377E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F3BA72A7297BF004E377E /* ImagePicker.swift */; };
+		DAA7D4102A76BB5F00A914AC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D40F2A76BB5F00A914AC /* LocationManager.swift */; };
 		DAAC031D2A702A890003F756 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031C2A702A890003F756 /* ProfileView.swift */; };
 		DAAC031F2A7033540003F756 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031E2A7033540003F756 /* ProfileViewModel.swift */; };
 		DAC4BC0A2A71766C00893B29 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC092A71766C00893B29 /* UserManager.swift */; };
@@ -58,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		DA7F3BA72A7297BF004E377E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		DAA7D40E2A769CAC00A914AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DAA7D40F2A76BB5F00A914AC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DAAC031C2A702A890003F756 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DAAC031E2A7033540003F756 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DAC4BC092A71766C00893B29 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 			children = (
 				DAEF320C2A6C0EFE00C9D412 /* AuthenticationManager.swift */,
 				DAC4BC092A71766C00893B29 /* UserManager.swift */,
+				DAA7D40F2A76BB5F00A914AC /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -172,6 +176,7 @@
 		DAEF31BC2A6BCAB900C9D412 /* YourBubble */ = {
 			isa = PBXGroup;
 			children = (
+				DAA7D40E2A769CAC00A914AC /* Info.plist */,
 				DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */,
 				DAEF31BF2A6BCAB900C9D412 /* ContentView.swift */,
 				DAEF320E2A6C123500C9D412 /* Model */,
@@ -344,6 +349,7 @@
 				DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */,
 				DAEF32152A6C212C00C9D412 /* SettingsView.swift in Sources */,
 				DAEF32102A6C124B00C9D412 /* AuthDataResultModel.swift in Sources */,
+				DAA7D4102A76BB5F00A914AC /* LocationManager.swift in Sources */,
 				DAAC031F2A7033540003F756 /* ProfileViewModel.swift in Sources */,
 				DAD331182A6D6368003DFA6D /* SignUpView.swift in Sources */,
 				DAEF32172A6C213B00C9D412 /* SettingsViewModel.swift in Sources */,
@@ -484,6 +490,9 @@
 				DEVELOPMENT_TEAM = W25CN6H3TY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YourBubble/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow us to use your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to use your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +522,9 @@
 				DEVELOPMENT_TEAM = W25CN6H3TY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YourBubble/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow us to use your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to use your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -12,5 +12,7 @@ struct DBUser {
     let fullName: String?
     let email: String?
     let profession: String?
-    let photoUrl: String? 
+    let photoUrl: String?
+    var latitude: Double?
+    var longitude: Double?
 }

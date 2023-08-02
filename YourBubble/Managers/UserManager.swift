@@ -7,7 +7,6 @@
 
 import Foundation
 import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 final class UserManager {
     static let shared = UserManager()
@@ -22,7 +21,6 @@ final class UserManager {
             "profession": profession,
             "photoUrl": auth.photoUrl as Any
         ]
-        
         
         try await Firestore.firestore().collection("users").document(auth.uid).setData(userData, merge: false)
     }
@@ -43,4 +41,12 @@ final class UserManager {
         return DBUser(userId: userId, fullName: fullName, email: email, profession: profession, photoUrl: photoUrl)
     }
     
+    func updateLocation(userId: String, latitude: Double, longitude: Double) async throws {
+        let userData: [String: Any] = [
+            "userId": userId,
+            "latitude": latitude,
+            "longitude": longitude
+        ]
+        try await Firestore.firestore().collection("users").document(userId).setData(userData, merge: true)
+    }
 }

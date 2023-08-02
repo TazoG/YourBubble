@@ -7,57 +7,30 @@
 
 import Foundation
 import CoreLocation
-
-//class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-//
-//    static let shared = LocationManager()
-//    var locationManager: CLLocationManager?
-//
-//    func checkIfLocationServiceEnabled() {
-//        if CLLocationManager.locationServicesEnabled() {
-//            self.locationManager = CLLocationManager()
-//            self.locationManager!.delegate = self
-//        } else {
-//            print("show user to let location permission turn on")
-//        }
-//    }
-//
-//    private func checkLocationAuthorization() {
-//        guard let locationManager else { return }
-//
-//        switch locationManager.authorizationStatus {
-//        case .notDetermined:
-//            locationManager.requestAlwaysAuthorization()
-//        case .restricted:
-//            print("Your location is restricted")
-//        case .denied:
-//            print("You have denied this app permission. Go into settings and turn it on please")
-//        case .authorizedAlways, .authorizedWhenInUse:
-//            break
-//        @unknown default:
-//            break
-//        }
-//    }
-//
-//    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-//        checkLocationAuthorization()
-//    }
-//}
+import FirebaseFirestore
+import FirebaseAuth
 
 class LocationManager: NSObject, ObservableObject {
     private let manager = CLLocationManager()
     @Published var userLocation: CLLocation?
     static let shared = LocationManager()
+//    private var lastUpdateTime: Date? = nil
+    
     
     override init() {
         super.init()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.startUpdatingLocation()
+//        manager.startUpdatingLocation()
+        requestLocation()
     }
     
     func requestLocation() {
-        manager.requestAlwaysAuthorization()
+        if manager.authorizationStatus == .notDetermined {
+            manager.requestWhenInUseAuthorization()
+        } else if manager.authorizationStatus == .authorizedWhenInUse {
+            manager.requestAlwaysAuthorization()
+        }
     }
 }
 
@@ -65,15 +38,15 @@ extension LocationManager: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
         case .notDetermined:
-            manager.requestAlwaysAuthorization()
+            manager.requestWhenInUseAuthorization()
         case .restricted:
             print("TAZO: Your location is restricted")
         case .denied:
             print("TAZO: You have denied this app permission. Go into settings and turn it on please")
         case .authorizedAlways:
-            break
+            manager.startUpdatingLocation()
         case .authorizedWhenInUse:
-            break
+            manager.startUpdatingLocation()
         @unknown default:
             break
         }
@@ -82,5 +55,29 @@ extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         self.userLocation = location
+        
+//        let currentTime = Date()
+        
+//        if let lastUpdateTime = lastUpdateTime,
+//           currentTime.timeIntervalSince(lastUpdateTime) < 3600 { // 3600 seconds = 1 hour
+//            return
+//        }
+        
+        Task {
+            do {
+                if let userId = Auth.auth().currentUser?.uid {
+                    try await UserManager.shared.updateLocation(userId: userId, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                }
+                //                self.lastUpdateTime = currentTime
+            } catch {
+                print("Failed to update location in Firebase: \(error)")
+            }
+        }
+        
+        manager.stopUpdatingLocation()
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 3600) {
+            self.manager.startUpdatingLocation()
+        }
     }
 }

@@ -36,5 +36,4 @@ final class SignInEmailViewModel: ObservableObject {
             self.showAlert = true
         }
     }
-    
 }

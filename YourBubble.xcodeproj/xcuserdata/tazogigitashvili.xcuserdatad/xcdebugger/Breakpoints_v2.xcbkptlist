@@ -148,84 +148,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E8031133-5060-48BE-AF08-4B9D99632A10"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YourBubble/Managers/UserManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "updateLocation(userId:latitude:longitude:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E8031133-5060-48BE-AF08-4B9D99632A10 - 1b78fffca714b75e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for YourBubble.UserManager.updateLocation(userId: Swift.String, latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; ()"
-                  moduleName = "YourBubble"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tazogigitashvili/Downloads/Tazo/YourBubble/YourBubble/YourBubble/Managers/UserManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "567">
-               </Location>
-               <Location
-                  uuid = "E8031133-5060-48BE-AF08-4B9D99632A10 - dad2071e1721c507"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for YourBubble.UserManager.updateLocation(userId: Swift.String, latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; ()"
-                  moduleName = "YourBubble"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tazogigitashvili/Downloads/Tazo/YourBubble/YourBubble/YourBubble/Managers/UserManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "55">
-               </Location>
-               <Location
-                  uuid = "E8031133-5060-48BE-AF08-4B9D99632A10 - c801edac30906a50"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for YourBubble.UserManager.updateLocation(userId: Swift.String, latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; ()"
-                  moduleName = "YourBubble"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tazogigitashvili/Downloads/Tazo/YourBubble/YourBubble/YourBubble/Managers/UserManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "E8031133-5060-48BE-AF08-4B9D99632A10 - efae54847b4f8cd3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for YourBubble.UserManager.updateLocation(userId: Swift.String, latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; ()"
-                  moduleName = "YourBubble"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tazogigitashvili/Downloads/Tazo/YourBubble/YourBubble/YourBubble/Managers/UserManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "93">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2158F0D2-90F9-4D4A-A0E4-D24C08B4E956"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -233,8 +155,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
             <Locations>
@@ -296,8 +218,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
             <Locations>
@@ -359,8 +281,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -375,8 +297,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,8 +313,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
             <Locations>
@@ -499,8 +421,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -515,8 +437,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "locationManagerDidChangeAuthorization(_:)"
             landmarkType = "7">
             <Locations>
@@ -578,8 +500,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "requestLocation()"
             landmarkType = "7">
             <Locations>
@@ -641,8 +563,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "requestLocation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -657,8 +579,8 @@
             filePath = "YourBubble/Managers/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "requestLocation()"
             landmarkType = "7">
             <Locations>

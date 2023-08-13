@@ -41,12 +41,21 @@ final class UserManager {
         return DBUser(userId: userId, fullName: fullName, email: email, profession: profession, photoUrl: photoUrl)
     }
     
+//    func updateLocation(userId: String, latitude: Double, longitude: Double) async throws {
+//        let userData: [String: Any] = [
+//            "userId": userId,
+//            "latitude": latitude,
+//            "longitude": longitude
+//        ]
+//        try await Firestore.firestore().collection("users").document(userId).setData(userData, merge: true)
+//    }
+    
     func updateLocation(userId: String, latitude: Double, longitude: Double) async throws {
-        let userData: [String: Any] = [
-            "userId": userId,
+        let locationData: [String: Any] = [
             "latitude": latitude,
             "longitude": longitude
         ]
-        try await Firestore.firestore().collection("users").document(userId).setData(userData, merge: true)
+        let userRef = Firestore.firestore().collection("users").document(userId)
+        try await userRef.updateData(locationData)
     }
 }

@@ -11,10 +11,9 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class LocationManager: NSObject, ObservableObject {
-    private let manager = CLLocationManager()
+    let manager = CLLocationManager()
     @Published var userLocation: CLLocation?
     static let shared = LocationManager()
-//    private var lastUpdateTime: Date? = nil
     
     
     override init() {
@@ -23,6 +22,9 @@ class LocationManager: NSObject, ObservableObject {
         manager.desiredAccuracy = kCLLocationAccuracyBest
 //        manager.startUpdatingLocation()
         requestLocation()
+        manager.allowsBackgroundLocationUpdates = true
+        manager.pausesLocationUpdatesAutomatically = false
+        manager.startMonitoringSignificantLocationChanges()
     }
     
     func requestLocation() {
@@ -56,19 +58,11 @@ extension LocationManager: CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         self.userLocation = location
         
-//        let currentTime = Date()
-        
-//        if let lastUpdateTime = lastUpdateTime,
-//           currentTime.timeIntervalSince(lastUpdateTime) < 3600 { // 3600 seconds = 1 hour
-//            return
-//        }
-        
         Task {
             do {
                 if let userId = Auth.auth().currentUser?.uid {
                     try await UserManager.shared.updateLocation(userId: userId, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
                 }
-                //                self.lastUpdateTime = currentTime
             } catch {
                 print("Failed to update location in Firebase: \(error)")
             }
@@ -79,5 +73,7 @@ extension LocationManager: CLLocationManagerDelegate {
         DispatchQueue.global().asyncAfter(deadline: .now() + 3600) {
             self.manager.startUpdatingLocation()
         }
+        
+        print(locations)
     }
 }

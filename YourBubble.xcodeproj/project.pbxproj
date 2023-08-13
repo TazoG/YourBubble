@@ -15,6 +15,7 @@
 		DAC4BC0C2A71856900893B29 /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC0B2A71856900893B29 /* DBUser.swift */; };
 		DAD331182A6D6368003DFA6D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331172A6D6368003DFA6D /* SignUpView.swift */; };
 		DAD3311A2A6D637B003DFA6D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */; };
+		DAD531402A890DD2000A34B1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD5313F2A890DD2000A34B1 /* Info.plist */; };
 		DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */; };
 		DAEF31C02A6BCAB900C9D412 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF31BF2A6BCAB900C9D412 /* ContentView.swift */; };
 		DAEF31C22A6BCABB00C9D412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEF31C12A6BCABB00C9D412 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		DAC4BC0B2A71856900893B29 /* DBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUser.swift; sourceTree = "<group>"; };
 		DAD331172A6D6368003DFA6D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		DAD5313F2A890DD2000A34B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAEF31BA2A6BCAB900C9D412 /* YourBubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourBubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourBubbleApp.swift; sourceTree = "<group>"; };
 		DAEF31BF2A6BCAB900C9D412 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		DAEF31B12A6BCAB900C9D412 = {
 			isa = PBXGroup;
 			children = (
+				DAD5313F2A890DD2000A34B1 /* Info.plist */,
 				DAEF31BC2A6BCAB900C9D412 /* YourBubble */,
 				DAEF31BB2A6BCAB900C9D412 /* Products */,
 			);
@@ -326,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD531402A890DD2000A34B1 /* Info.plist in Resources */,
 				DAEF31C52A6BCABB00C9D412 /* Preview Assets.xcassets in Resources */,
 				DAEF31C22A6BCABB00C9D412 /* Assets.xcassets in Resources */,
 				DAEF31CC2A6BCDB700C9D412 /* GoogleService-Info.plist in Resources */,

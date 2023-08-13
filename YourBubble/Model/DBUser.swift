@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DBUser {
+struct DBUser: Codable {
     let userId: String
     let fullName: String?
     let email: String?

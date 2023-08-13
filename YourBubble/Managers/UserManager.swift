@@ -13,6 +13,16 @@ final class UserManager {
     
     private init() {}
     
+    private let userCollection = Firestore.firestore().collection("users")
+    
+    private func userDocument(userId: String) -> DocumentReference {
+        userCollection.document(userId)
+    }
+    
+//    func createNewUser(user: DBUser) async throws {
+//        try userDocument(userId: user.userId).setData(from: user, merge: false, encoder: Firestore.Encoder())
+//    }
+    
     func createNewUser(auth: AuthDataResultModel, fullName: String, profession: String) async throws {
         let userData: [String: Any] = [
             "userId": auth.uid,
@@ -21,12 +31,13 @@ final class UserManager {
             "profession": profession,
             "photoUrl": auth.photoUrl as Any
         ]
-        
-        try await Firestore.firestore().collection("users").document(auth.uid).setData(userData, merge: false)
+
+        try await userDocument(userId: auth.uid).setData(userData, merge: false)
+//        try await Firestore.firestore().collection("users").document(auth.uid).setData(userData, merge: false)
     }
     
     func getUser(userId: String) async throws -> DBUser {
-        let snapshot = try await Firestore.firestore().collection("users").document(userId).getDocument()
+        let snapshot = try await userDocument(userId: userId).getDocument()
         
         guard let data = snapshot.data(), let userId = data["userId"] as? String else {
             throw URLError(.badServerResponse)
@@ -55,7 +66,7 @@ final class UserManager {
             "latitude": latitude,
             "longitude": longitude
         ]
-        let userRef = Firestore.firestore().collection("users").document(userId)
-        try await userRef.updateData(locationData)
+//        let userRef = Firestore.firestore().collection("users").document(userId)
+        try await userDocument(userId: userId).updateData(locationData)
     }
 }

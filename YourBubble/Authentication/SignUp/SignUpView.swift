@@ -15,8 +15,6 @@ struct SignUpView: View {
     
     var body: some View {
         VStack {
-            
-            
             TextField("Full Name...", text: $viewModel.fullName)
                 .padding()
                 .background(Color.gray.opacity(0.4))
@@ -41,7 +39,6 @@ struct SignUpView: View {
             
             Button {
                 Task {
-                  
                    try await viewModel.signUp()
                 }
             } label: {

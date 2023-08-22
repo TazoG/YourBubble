@@ -63,7 +63,13 @@ struct ProfileView: View {
                     Text("Location")
                 }
                 .padding()
-
+                
+                List(viewModel.usersWithSameProfession) { user in
+                    VStack(alignment: .leading) {
+                        Text("Full Name: \(user.fullName ?? "")")
+                        Text("Profession: \(user.profession ?? "")")
+                    }
+                }
                 
                 Spacer()
             }
@@ -72,6 +78,7 @@ struct ProfileView: View {
             })
             .task {
                 try? await viewModel.loadCurrentUser()
+                await viewModel.loadUsersWithSameProfession()
             }
             .navigationTitle("Profile")
             .toolbar {

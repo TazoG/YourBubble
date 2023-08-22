@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47DB9E7B55A3F500BFF75440 /* Pods_YourBubble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2663CB7E219E2E9F4B05194D /* Pods_YourBubble.framework */; };
 		DA7F3BA82A7297BF004E377E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F3BA72A7297BF004E377E /* ImagePicker.swift */; };
+		DAA2AD8E2A8E5F68003AF3F4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2AD8D2A8E5F68003AF3F4 /* Error.swift */; };
 		DAA7D4102A76BB5F00A914AC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7D40F2A76BB5F00A914AC /* LocationManager.swift */; };
 		DAAC031D2A702A890003F756 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031C2A702A890003F756 /* ProfileView.swift */; };
 		DAAC031F2A7033540003F756 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC031E2A7033540003F756 /* ProfileViewModel.swift */; };
+		DAB201BD2A8D372700A90616 /* Query+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB201BC2A8D372700A90616 /* Query+Ext.swift */; };
 		DAC4BC0A2A71766C00893B29 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC092A71766C00893B29 /* UserManager.swift */; };
 		DAC4BC0C2A71856900893B29 /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC0B2A71856900893B29 /* DBUser.swift */; };
 		DAD331182A6D6368003DFA6D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331172A6D6368003DFA6D /* SignUpView.swift */; };
 		DAD3311A2A6D637B003DFA6D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */; };
-		DAD531402A890DD2000A34B1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD5313F2A890DD2000A34B1 /* Info.plist */; };
 		DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */; };
 		DAEF31C02A6BCAB900C9D412 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF31BF2A6BCAB900C9D412 /* ContentView.swift */; };
 		DAEF31C22A6BCABB00C9D412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEF31C12A6BCABB00C9D412 /* Assets.xcassets */; };
@@ -59,15 +61,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11D105B68C1142C72DC7DA0C /* Pods-YourBubble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourBubble.debug.xcconfig"; path = "Target Support Files/Pods-YourBubble/Pods-YourBubble.debug.xcconfig"; sourceTree = "<group>"; };
+		2663CB7E219E2E9F4B05194D /* Pods_YourBubble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourBubble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7F3BA72A7297BF004E377E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		DAA2AD8D2A8E5F68003AF3F4 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		DAA7D40F2A76BB5F00A914AC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DAAC031C2A702A890003F756 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DAAC031E2A7033540003F756 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		DAB201BC2A8D372700A90616 /* Query+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Query+Ext.swift"; sourceTree = "<group>"; };
 		DAC4BC092A71766C00893B29 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		DAC4BC0B2A71856900893B29 /* DBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUser.swift; sourceTree = "<group>"; };
 		DAD331172A6D6368003DFA6D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		DAD5313F2A890DD2000A34B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD531412A8916CE000A34B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		DAEF31BA2A6BCAB900C9D412 /* YourBubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourBubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourBubbleApp.swift; sourceTree = "<group>"; };
 		DAEF31BF2A6BCAB900C9D412 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 		DAEF32112A6C1E0200C9D412 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		DAEF32142A6C212C00C9D412 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DAEF32162A6C213B00C9D412 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		EBB61C21F29B6AB670472561 /* Pods-YourBubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourBubble.release.xcconfig"; path = "Target Support Files/Pods-YourBubble/Pods-YourBubble.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,16 +123,35 @@
 				DAEF31E92A6BCFF100C9D412 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				DAEF31F92A6BCFF200C9D412 /* FirebaseMessaging in Frameworks */,
 				DAEF31F52A6BCFF200C9D412 /* FirebaseInstallations in Frameworks */,
+				47DB9E7B55A3F500BFF75440 /* Pods_YourBubble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		343A5D26AF05482A8C5F6574 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11D105B68C1142C72DC7DA0C /* Pods-YourBubble.debug.xcconfig */,
+				EBB61C21F29B6AB670472561 /* Pods-YourBubble.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		890E1791E54D58EEBCCFCF6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2663CB7E219E2E9F4B05194D /* Pods_YourBubble.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA7F3BA62A729786004E377E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				DA7F3BA72A7297BF004E377E /* ImagePicker.swift */,
+				DAA2AD8D2A8E5F68003AF3F4 /* Error.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -137,6 +163,14 @@
 				DAAC031E2A7033540003F756 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		DAB201BB2A8D370100A90616 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				DAB201BC2A8D372700A90616 /* Query+Ext.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		DAC4BC082A71764E00893B29 /* Managers */ = {
@@ -161,9 +195,11 @@
 		DAEF31B12A6BCAB900C9D412 = {
 			isa = PBXGroup;
 			children = (
-				DAD5313F2A890DD2000A34B1 /* Info.plist */,
+				DAD531412A8916CE000A34B1 /* Info.plist */,
 				DAEF31BC2A6BCAB900C9D412 /* YourBubble */,
 				DAEF31BB2A6BCAB900C9D412 /* Products */,
+				343A5D26AF05482A8C5F6574 /* Pods */,
+				890E1791E54D58EEBCCFCF6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +220,8 @@
 				DAAC031B2A702A5C0003F756 /* Profile */,
 				DAC4BC082A71764E00893B29 /* Managers */,
 				DAEF32042A6BE69A00C9D412 /* Authentication */,
+				DA7F3BA62A729786004E377E /* Utility */,
+				DAB201BB2A8D370100A90616 /* Extentions */,
 				DAEF31CB2A6BCDB700C9D412 /* GoogleService-Info.plist */,
 				DAEF31C12A6BCABB00C9D412 /* Assets.xcassets */,
 				DAEF31C32A6BCABB00C9D412 /* Preview Content */,
@@ -207,7 +245,6 @@
 				DAEF32132A6C210B00C9D412 /* Settings */,
 				DAD331162A6D6344003DFA6D /* SignUp */,
 				DAEF320B2A6C098900C9D412 /* SignIn */,
-				DA7F3BA62A729786004E377E /* Utility */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -246,9 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAEF31C82A6BCABB00C9D412 /* Build configuration list for PBXNativeTarget "YourBubble" */;
 			buildPhases = (
+				029713CEE5D5DB0E5CDC98F8 /* [CP] Check Pods Manifest.lock */,
 				DAEF31B62A6BCAB900C9D412 /* Sources */,
 				DAEF31B72A6BCAB900C9D412 /* Frameworks */,
 				DAEF31B82A6BCAB900C9D412 /* Resources */,
+				C4EDA20D24BC649DAF368EBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,7 +368,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAD531402A890DD2000A34B1 /* Info.plist in Resources */,
 				DAEF31C52A6BCABB00C9D412 /* Preview Assets.xcassets in Resources */,
 				DAEF31C22A6BCABB00C9D412 /* Assets.xcassets in Resources */,
 				DAEF31CC2A6BCDB700C9D412 /* GoogleService-Info.plist in Resources */,
@@ -337,6 +375,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		029713CEE5D5DB0E5CDC98F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YourBubble-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4EDA20D24BC649DAF368EBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourBubble/Pods-YourBubble-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourBubble/Pods-YourBubble-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourBubble/Pods-YourBubble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAEF31B62A6BCAB900C9D412 /* Sources */ = {
@@ -347,9 +427,11 @@
 				DAAC031D2A702A890003F756 /* ProfileView.swift in Sources */,
 				DAEF31C02A6BCAB900C9D412 /* ContentView.swift in Sources */,
 				DA7F3BA82A7297BF004E377E /* ImagePicker.swift in Sources */,
+				DAB201BD2A8D372700A90616 /* Query+Ext.swift in Sources */,
 				DAC4BC0A2A71766C00893B29 /* UserManager.swift in Sources */,
 				DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */,
 				DAEF32152A6C212C00C9D412 /* SettingsView.swift in Sources */,
+				DAA2AD8E2A8E5F68003AF3F4 /* Error.swift in Sources */,
 				DAEF32102A6C124B00C9D412 /* AuthDataResultModel.swift in Sources */,
 				DAA7D4102A76BB5F00A914AC /* LocationManager.swift in Sources */,
 				DAAC031F2A7033540003F756 /* ProfileViewModel.swift in Sources */,
@@ -483,6 +565,7 @@
 		};
 		DAEF31C92A6BCABB00C9D412 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11D105B68C1142C72DC7DA0C /* Pods-YourBubble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +599,7 @@
 		};
 		DAEF31CA2A6BCABB00C9D412 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB61C21F29B6AB670472561 /* Pods-YourBubble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

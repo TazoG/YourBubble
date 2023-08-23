@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 extension Query {
     
@@ -14,7 +15,12 @@ extension Query {
         let snapshot = try await self.getDocuments()
         
         return try snapshot.documents.compactMap({ document in
-            try document.data(as: T.self)
+            let jsonData = try JSONSerialization.data(withJSONObject: document.data(), options: [])
+            let object = try JSONDecoder().decode(T.self, from: jsonData)
+            return object
+//            try document.data(as: T.self)
         })
     }
 }
+
+

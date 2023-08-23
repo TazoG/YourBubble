@@ -20,7 +20,7 @@ class LocationManager: NSObject, ObservableObject {
         super.init()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
-//        manager.startUpdatingLocation()
+        manager.distanceFilter = 5000
         requestLocation()
         manager.allowsBackgroundLocationUpdates = true
         manager.pausesLocationUpdatesAutomatically = false
@@ -67,13 +67,13 @@ extension LocationManager: CLLocationManagerDelegate {
                 print("Failed to update location in Firebase: \(error)")
             }
         }
+//
+//        manager.stopUpdatingLocation()
+//
+//        DispatchQueue.global().asyncAfter(deadline: .now() + 3600) {
+//            self.manager.startUpdatingLocation()
+//        }
         
-        manager.stopUpdatingLocation()
-        
-        DispatchQueue.global().asyncAfter(deadline: .now() + 3600) {
-            self.manager.startUpdatingLocation()
-        }
-        
-        print(locations)
+        print("TAZO: \(locations)")
     }
 }

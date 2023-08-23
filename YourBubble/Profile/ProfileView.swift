@@ -14,6 +14,7 @@ struct ProfileView: View {
     @State var openCameraRoll = false
     @State var imageSelected = UIImage()
     @State private var profileImage: Image? = Image(systemName: "person.crop.circle")
+    @State private var nearbyUsers: [DBUser] = []
     @Binding var showSignInView: Bool
     
     var body: some View {
@@ -64,7 +65,7 @@ struct ProfileView: View {
                 }
                 .padding()
                 
-                List(viewModel.usersWithSameProfession) { user in
+                List(viewModel.nearbyUsers, id: \.userId) { user in
                     VStack(alignment: .leading) {
                         Text("Full Name: \(user.fullName ?? "")")
                         Text("Profession: \(user.profession ?? "")")
@@ -78,7 +79,8 @@ struct ProfileView: View {
             })
             .task {
                 try? await viewModel.loadCurrentUser()
-                await viewModel.loadUsersWithSameProfession()
+                viewModel.loadNearbyUsers()
+//                await viewModel.loadUsersWithSameProfession()
             }
             .navigationTitle("Profile")
             .toolbar {

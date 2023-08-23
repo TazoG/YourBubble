@@ -7,6 +7,9 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseAuth
+import CoreLocation
+import GeoFire
 
 final class UserManager {
     static let shared = UserManager()
@@ -50,24 +53,73 @@ final class UserManager {
     }
     
     func updateLocation(userId: String, latitude: Double, longitude: Double) async throws {
+        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let hash = GFUtils.geoHash(forLocation: location)
+        
+        
         let locationData: [String: Any] = [
             "latitude": latitude,
-            "longitude": longitude
+            "longitude": longitude,
+            "geohash" : hash
         ]
         
         try await userDocument(userId: userId).updateData(locationData)
     }
     
-    func getUsersWithSameProfession(asCurrentUser userId: String) async throws -> [DBUser] {
-        let currentUser = try await getUser(userId: userId)
-        guard let profession = currentUser.profession else {
+    func getUsersNearbyCurrentUser() async throws -> [DBUser] {
+        guard let userId = Auth.auth().currentUser?.uid else {
             throw UserManagerError.noProfessionFound
         }
         
-        let query = userCollection.whereField("profession", isEqualTo: profession)
+        let currentUser = try await getUser(userId: userId)
         
-        let users = try await query.getDocuments(as: DBUser.self)
+        guard
+            let currentUserLat = currentUser.latitude,
+            let currentUserLng = currentUser.longitude else {
+            throw UserManagerError.noLocationFound
+        }
         
-        return users
+        let center = CLLocationCoordinate2D(latitude: currentUserLat, longitude: currentUserLng)
+        let radiusInM: Double = 1000
+        
+        let queryBounds = GFUtils.queryBounds(forLocation: center, withRadius: radiusInM)
+        let queries = queryBounds.map { bound -> Query in
+            return userCollection
+                .order(by: "geohash")
+                .start(at: [bound.startValue])
+                .end(at: [bound.endValue])
+        }
+        
+        var nearbyUsers: [DBUser] = []
+        
+        for query in queries {
+            let users: [DBUser] = try await query.getDocuments(as: DBUser.self)
+            
+            for user in users {
+                guard let lat = user.latitude, let lng = user.longitude else { continue }
+                let coordinates = CLLocation(latitude: lat, longitude: lng)
+                let centerPoint = CLLocation(latitude: center.latitude, longitude: center.longitude)
+                
+                let distance = GFUtils.distance(from: centerPoint, to: coordinates)
+                if distance <= radiusInM {
+                    nearbyUsers.append(user)
+                }
+            }
+        }
+        
+        return nearbyUsers
     }
+    
+//    func getUsersWithSameProfession(asCurrentUser userId: String) async throws -> [DBUser] {
+//        let currentUser = try await getUser(userId: userId)
+//        guard let profession = currentUser.profession else {
+//            throw UserManagerError.noProfessionFound
+//        }
+//
+//        let query = userCollection.whereField("profession", isEqualTo: profession)
+//
+//        let users = try await query.getDocuments(as: DBUser.self)
+//
+//        return users
+//    }
 }

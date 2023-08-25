@@ -16,6 +16,9 @@
 		DAB201BD2A8D372700A90616 /* Query+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB201BC2A8D372700A90616 /* Query+Ext.swift */; };
 		DAC4BC0A2A71766C00893B29 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC092A71766C00893B29 /* UserManager.swift */; };
 		DAC4BC0C2A71856900893B29 /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4BC0B2A71856900893B29 /* DBUser.swift */; };
+		DACD850E2A98FE0D00FCFC24 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD850D2A98FE0D00FCFC24 /* GoogleMapView.swift */; };
+		DACD85142A990EDC00FCFC24 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DACD85132A990EDC00FCFC24 /* SDWebImageSwiftUI */; };
+		DACD85162A99118400FCFC24 /* ProfileWithGoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD85152A99118400FCFC24 /* ProfileWithGoogleMapView.swift */; };
 		DAD331182A6D6368003DFA6D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331172A6D6368003DFA6D /* SignUpView.swift */; };
 		DAD3311A2A6D637B003DFA6D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */; };
 		DAEF31BE2A6BCAB900C9D412 /* YourBubbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF31BD2A6BCAB900C9D412 /* YourBubbleApp.swift */; };
@@ -71,6 +74,8 @@
 		DAB201BC2A8D372700A90616 /* Query+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Query+Ext.swift"; sourceTree = "<group>"; };
 		DAC4BC092A71766C00893B29 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		DAC4BC0B2A71856900893B29 /* DBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUser.swift; sourceTree = "<group>"; };
+		DACD850D2A98FE0D00FCFC24 /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
+		DACD85152A99118400FCFC24 /* ProfileWithGoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWithGoogleMapView.swift; sourceTree = "<group>"; };
 		DAD331172A6D6368003DFA6D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DAD331192A6D637B003DFA6D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		DAD531412A8916CE000A34B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
@@ -121,6 +126,7 @@
 				DAEF32012A6BCFF300C9D412 /* FirebaseStorage in Frameworks */,
 				DAEF31E52A6BCFF100C9D412 /* FirebaseDynamicLinks in Frameworks */,
 				DAEF31E92A6BCFF100C9D412 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				DACD85142A990EDC00FCFC24 /* SDWebImageSwiftUI in Frameworks */,
 				DAEF31F92A6BCFF200C9D412 /* FirebaseMessaging in Frameworks */,
 				DAEF31F52A6BCFF200C9D412 /* FirebaseInstallations in Frameworks */,
 				47DB9E7B55A3F500BFF75440 /* Pods_YourBubble.framework in Frameworks */,
@@ -152,6 +158,7 @@
 			children = (
 				DA7F3BA72A7297BF004E377E /* ImagePicker.swift */,
 				DAA2AD8D2A8E5F68003AF3F4 /* Error.swift */,
+				DACD850D2A98FE0D00FCFC24 /* GoogleMapView.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -161,6 +168,7 @@
 			children = (
 				DAAC031C2A702A890003F756 /* ProfileView.swift */,
 				DAAC031E2A7033540003F756 /* ProfileViewModel.swift */,
+				DACD85152A99118400FCFC24 /* ProfileWithGoogleMapView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 				DAEF31B72A6BCAB900C9D412 /* Frameworks */,
 				DAEF31B82A6BCAB900C9D412 /* Resources */,
 				C4EDA20D24BC649DAF368EBB /* [CP] Embed Pods Frameworks */,
+				EC297B01E44C273284D72A70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,6 +331,7 @@
 				DAEF31FE2A6BCFF300C9D412 /* FirebaseRemoteConfigSwift */,
 				DAEF32002A6BCFF300C9D412 /* FirebaseStorage */,
 				DAEF32022A6BCFF300C9D412 /* FirebaseStorageCombine-Community */,
+				DACD85132A990EDC00FCFC24 /* SDWebImageSwiftUI */,
 			);
 			productName = YourBubble;
 			productReference = DAEF31BA2A6BCAB900C9D412 /* YourBubble.app */;
@@ -353,6 +363,7 @@
 			mainGroup = DAEF31B12A6BCAB900C9D412;
 			packageReferences = (
 				DAEF31CD2A6BCFF000C9D412 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DACD85122A990EDC00FCFC24 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = DAEF31BB2A6BCAB900C9D412 /* Products */;
 			projectDirPath = "";
@@ -416,6 +427,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourBubble/Pods-YourBubble-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EC297B01E44C273284D72A70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourBubble/Pods-YourBubble-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourBubble/Pods-YourBubble-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourBubble/Pods-YourBubble-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -435,12 +463,14 @@
 				DAEF32102A6C124B00C9D412 /* AuthDataResultModel.swift in Sources */,
 				DAA7D4102A76BB5F00A914AC /* LocationManager.swift in Sources */,
 				DAAC031F2A7033540003F756 /* ProfileViewModel.swift in Sources */,
+				DACD85162A99118400FCFC24 /* ProfileWithGoogleMapView.swift in Sources */,
 				DAD331182A6D6368003DFA6D /* SignUpView.swift in Sources */,
 				DAEF32172A6C213B00C9D412 /* SettingsViewModel.swift in Sources */,
 				DAEF32062A6BE6D300C9D412 /* AuthenticationView.swift in Sources */,
 				DAEF320D2A6C0EFE00C9D412 /* AuthenticationManager.swift in Sources */,
 				DAC4BC0C2A71856900893B29 /* DBUser.swift in Sources */,
 				DAEF32082A6C05B700C9D412 /* SignInEmailView.swift in Sources */,
+				DACD850E2A98FE0D00FCFC24 /* GoogleMapView.swift in Sources */,
 				DAD3311A2A6D637B003DFA6D /* SignUpViewModel.swift in Sources */,
 				DAEF320A2A6C05CA00C9D412 /* SignInEmailViewModel.swift in Sources */,
 			);
@@ -655,6 +685,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DACD85122A990EDC00FCFC24 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		DAEF31CD2A6BCFF000C9D412 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -666,6 +704,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DACD85132A990EDC00FCFC24 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DACD85122A990EDC00FCFC24 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		DAEF31CE2A6BCFF000C9D412 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DAEF31CD2A6BCFF000C9D412 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
